@@ -1,0 +1,66 @@
+.flower-container {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12rem;
+  height: 12rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none; /* Let clicks pass through to the game window handler */
+  z-index: 5;
+}
+
+.pixel-flower-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
+  transition: filter 0.3s ease;
+}
+
+/* Evolution Animation Effect - Brightness only, no movement */
+@keyframes bloom-flash {
+  0% {
+    filter: brightness(1) drop-shadow(0 0 0 transparent);
+  }
+  50% {
+    filter: brightness(2) drop-shadow(0 0 20px #EC4899);
+  }
+  100% {
+    filter: brightness(1) drop-shadow(0 4px 6px rgba(0,0,0,0.5));
+  }
+}
+
+@keyframes float-leaves {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+.flower-evolving {
+  animation: bloom-flash 1.5s ease-in-out forwards;
+}
+
+.flower-idle {
+  animation: float-leaves 3s ease-in-out infinite;
+}
+
+/* Floating particles for evolution */
+.evolution-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #FEF08A;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+}
+
+@keyframes particle-rise {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-60px) scale(0); opacity: 0; }
+}
+
+.particle-active {
+  animation: particle-rise 1s ease-out forwards;
+}

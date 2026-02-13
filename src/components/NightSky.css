@@ -1,0 +1,68 @@
+.night-sky-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #2e2659, #4d3b68, #9d6d90);
+}
+
+.sky-glow {
+  position: absolute;
+  top: 2.5rem;
+  left: 2.5rem;
+  width: 10rem;
+  height: 10rem;
+  background-color: rgba(168, 85, 247, 0.2);
+  border-radius: 9999px;
+  filter: blur(48px); /* blur-3xl */
+}
+
+.pixel-moon-container {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 6rem;
+  height: 6rem;
+  pointer-events: none;
+}
+
+@media (min-width: 640px) {
+  .pixel-moon-container {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+.pixel-moon-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 15px rgba(253, 224, 71, 0.6));
+}
+
+.pixel-heart {
+  position: absolute;
+  /* animate-float is defined in main.css */
+}
+
+.pixel-heart-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
+}
+
+.pixel-star {
+  position: absolute;
+  background-color: #FEF9C3;
+  /* animate-twinkle is defined in main.css */
+}
+
+.crt-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image:
+    linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+    linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  background-size: 100% 2px, 3px 100%;
+}

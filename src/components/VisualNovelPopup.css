@@ -1,0 +1,78 @@
+.vn-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: flex-end; /* Align to bottom for VN style */
+  justify-content: center;
+  z-index: 100;
+  padding-bottom: 2rem;
+  animation: fade-in 0.3s ease-out;
+}
+
+.vn-container {
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.vn-character-sprite {
+  width: 150px;
+  height: 150px;
+  margin-bottom: -20px; /* Slight overlap with text box */
+  z-index: 10;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
+  animation: float 3s ease-in-out infinite;
+}
+
+.vn-text-box {
+  width: 100%;
+  background: rgba(17, 24, 39, 0.95); /* Dark bg */
+  border: 4px solid #FBCFE8; /* Pink border */
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  color: white;
+  font-family: 'Press Start 2P', monospace;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5), 0 0 0 4px #831843; /* Double border effect */
+  cursor: pointer;
+}
+
+.vn-name-tag {
+  position: absolute;
+  top: -16px;
+  left: 20px;
+  background-color: #EC4899;
+  color: white;
+  padding: 4px 12px;
+  border: 2px solid #831843;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  transform: rotate(-2deg);
+}
+
+.vn-text-content {
+  font-size: 0.8rem;
+  line-height: 1.8;
+  min-height: 3.6em; /* Reserve space for 2 lines */
+}
+
+.vn-next-indicator {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 1rem;
+  color: #FBCFE8;
+  animation: bounce-right 1s infinite;
+}
+
+@keyframes bounce-right {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+}
