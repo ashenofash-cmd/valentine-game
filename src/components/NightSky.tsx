@@ -6,7 +6,7 @@ const PixelMoon: React.FC = () => {
   return (
     <div className="pixel-moon-container moon-float">
       <img
-        src="/pixel-moon.png"
+        src="/assets/pixel-moon.png"
         alt="Pixel moon"
         className="pixel-moon-svg moon-pixel-art"
       />

@@ -4,6 +4,8 @@ import { ProgressBar } from './components/ProgressBar';
 import { ItemPopup } from './components/ItemPopup';
 import {KuromiPopup} from "./components/KuromiPopup.tsx";
 import {VisualNovelPopup} from "./components/VisualNovelPopup.tsx";
+import kuromiMain from './assets/kuromi1.png';
+import kuromiSecond from './assets/kuromi2.png';
 import './App.css';
 
 export default function App() {
@@ -118,7 +120,7 @@ export default function App() {
           </div>
           <div className="notification-avatar">
             <img
-              src="/kuromi-icon.png"
+              src={kuromiMain}
               alt="Kuromi"
               className="kuromi-sprite-img"
             />
@@ -165,7 +167,7 @@ export default function App() {
           {/* Hover Bubble "Crawls out" */}
           {isHoveringIcon && (
             <div className="kuromi-hover-bubble">
-              <p>Ты просто космос! 🖤</p>
+              <p>Ты просто космос!</p>
               <p className="sub-text">(И не забывай улыбаться!)</p>
             </div>
           )}
@@ -177,8 +179,13 @@ export default function App() {
             onMouseLeave={() => setIsHoveringIcon(false)}
             title="Сообщение Куроми"
           >
-            <KuromiHeadSvg />
+            <img
+              src={kuromiSecond}
+              alt="Kuromi"
+              className="kuromi-minimized-img"
+            />
           </button>
+
         </div>
       )}
 
@@ -203,13 +210,3 @@ export default function App() {
     </div>
   );
 }
-
-// Helper component for the SVG to avoid duplication
-const KuromiHeadSvg = () => (
-  <svg viewBox="0 0 24 24" className="w-full h-full">
-    <path d="M4 8 C4 4 20 4 20 8 L22 6 L20 12 L22 18 C22 22 2 22 2 18 L4 12 L2 6 Z" fill="#111827" />
-    <circle cx="12" cy="14" r="6" fill="white" />
-    <path d="M10 13 h1 v2 h-1 z M13 13 h1 v2 h-1 z" fill="black" />
-    <path d="M12 9 l-1 1 h2 z" fill="#EC4899" />
-  </svg>
-);
