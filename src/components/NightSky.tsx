@@ -1,12 +1,13 @@
 import React, { useMemo } from 'react';
 import type {Star, Heart} from '../types';
 import './NightSky.css';
+import pixelMoon from '../assets/pixel-moon.png';
 
 const PixelMoon: React.FC = () => {
   return (
     <div className="pixel-moon-container moon-float">
       <img
-        src="/assets/pixel-moon.png"
+        src={pixelMoon}
         alt="Pixel moon"
         className="pixel-moon-svg moon-pixel-art"
       />

@@ -1,6 +1,7 @@
 import React from 'react';
 import './KuromiPopup.css';
 import pixelHeart from '../assets/pixel-heart.png';
+import kuromiIcon from '../assets/kuromi-icon.png';
 
 interface KuromiPopupProps {
   onClose: () => void;
@@ -14,7 +15,7 @@ export const KuromiPopup: React.FC<KuromiPopupProps> = ({ onClose }) => {
         {/* Pixel Art Kuromi SVG */}
         <div className="kuromi-character-box">
           <img
-            src="/assets/kuromi-icon.png"
+            src={kuromiIcon}
             alt="Kuromi"
             className="kuromi-sprite-img"
           />

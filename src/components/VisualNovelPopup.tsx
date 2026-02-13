@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './VisualNovelPopup.css';
+import kuromiSecond from '../assets/kuromi2.png';
 
 interface VisualNovelPopupProps {
   onClose: () => void;
@@ -28,7 +29,7 @@ export const VisualNovelPopup: React.FC<VisualNovelPopupProps> = ({ onClose }) =
         {/* Kuromi Sprite */}
         <div className="vn-character-sprite">
           <img
-            src="/assets/kuromi2.png"
+            src={kuromiSecond}
             alt="Kuromi"
             className="vn-character-img"
           />

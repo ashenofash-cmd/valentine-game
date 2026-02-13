@@ -5,7 +5,7 @@ import { ItemPopup } from './components/ItemPopup';
 import {KuromiPopup} from "./components/KuromiPopup.tsx";
 import {VisualNovelPopup} from "./components/VisualNovelPopup.tsx";
 import kuromiMain from './assets/kuromi1.png';
-import kuromiSecond from './assets/kuromi2.png';
+import kuromiIcon from './assets/kuromi-icon.png';
 import './App.css';
 
 export default function App() {
@@ -120,7 +120,7 @@ export default function App() {
           </div>
           <div className="notification-avatar">
             <img
-              src={kuromiMain}
+              src={kuromiIcon}
               alt="Kuromi"
               className="kuromi-sprite-img"
             />
@@ -129,9 +129,6 @@ export default function App() {
       )}
 
       <div className="app-content">
-        <h1 className="game-title">
-          Цветок любви
-        </h1>
 
         <ProgressBar
           level={level}
@@ -151,11 +148,18 @@ export default function App() {
           title="Открыть письмо"
         >
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2 6C2 4.9 2.9 4 4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6Z" stroke="currentColor" strokeWidth="2" fill="#FEF08A"/>
-            <path d="M2 6L12 13L22 6" stroke="#BE185D" strokeWidth="2"/>
-            <path d="M2 18L8 12" stroke="#BE185D" strokeWidth="2"/>
-            <path d="M22 18L16 12" stroke="#BE185D" strokeWidth="2"/>
-            <rect x="11" y="11" width="2" height="2" fill="#BE185D" />
+            {/* Box Bottom */}
+            <rect x="5" y="11" width="14" height="10" fill="#BE185D" stroke="#831843" strokeWidth="2"/>
+            {/* Box Lid */}
+            <rect x="3" y="7" width="18" height="4" fill="#EC4899" stroke="#831843" strokeWidth="2"/>
+            {/* Vertical Ribbon */}
+            <rect x="10" y="7" width="4" height="14" fill="#FEF08A" stroke="#831843" strokeWidth="2"/>
+            {/* Bow Left */}
+            <path d="M12 7C12 7 9 2 6 5C4 7 8 8 12 7Z" fill="#FEF08A" stroke="#831843" strokeWidth="1.5"/>
+            {/* Bow Right */}
+            <path d="M12 7C12 7 15 2 18 5C20 7 16 8 12 7Z" fill="#FEF08A" stroke="#831843" strokeWidth="1.5"/>
+            {/* Center Knot */}
+            <circle cx="12" cy="7" r="1.5" fill="#FBBF24" />
           </svg>
         </button>
       )}
@@ -180,7 +184,7 @@ export default function App() {
             title="Сообщение Куроми"
           >
             <img
-              src={kuromiSecond}
+              src={kuromiMain}
               alt="Kuromi"
               className="kuromi-minimized-img"
             />
