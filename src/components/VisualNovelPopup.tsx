@@ -10,7 +10,7 @@ export const VisualNovelPopup: React.FC<VisualNovelPopupProps> = ({ onClose }) =
   const [step, setStep] = useState(0);
 
   const DIALOGS = [
-    "Хи-хи. Приветик! Поздравляю с днём Святого Валентина!",
+    "Хи-хи. Приветик, Лерочка! Поздравляю с днём Святого Валентина!",
     "Наверное тот, кто отправил тебе это, очень дорожит тобой... Надеюсь, ты им тоже! 💖"
   ];
 
